@@ -1,0 +1,3 @@
+[submodule "docker-volatility"]
+	path = docker-volatility
+	url = https://github.com/chrisbensch/docker-volatility
