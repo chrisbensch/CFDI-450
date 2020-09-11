@@ -1,3 +1,9 @@
 [submodule "docker-volatility"]
 	path = docker-volatility
 	url = https://github.com/chrisbensch/docker-volatility
+[submodule "docker-plaso"]
+	path = docker-plaso
+	url = https://github.com/chrisbensch/docker-plaso
+[submodule "docker-manalyzer"]
+	path = docker-manalyzer
+	url = https://github.com/chrisbensch/docker-manalyzer
