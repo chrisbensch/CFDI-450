@@ -1,10 +1,7 @@
-#function volatility() {
-#  docker run --rm --user=$(id -u):$(id -g) -v "$(pwd)":/dumps:ro,Z -ti phocean/volatility $@
-#}
-
 
 function vol_win() {
-  docker run --rm -it -v /mnt/hgfs/Evidence:/data chrisbensch/docker-volatility $@
+  docker run --rm -it -v /mnt/hgfs/Evidence:/data chrisbensch/docker-volatility $@ imageinfo
+  docker run --rm -it -v /mnt/hgfs/Evidence:/data chrisbensch/docker-volatility $@ pslist
 }
 
 function vol() {
@@ -15,7 +12,7 @@ function l2t_win() {
   docker run --rm -it -v /mnt/hgfs/Evidence:/data chrisbensch/docker-plaso log2timeline --parsers win7 -f filter_windows.txt $@
 }
 
-function l2t() {
+function l2t_lin() {
   docker run --rm -it -v /mnt/hgfs/Evidence:/data chrisbensch/docker-plaso log2timeline --parsers linux $@
 }
 
